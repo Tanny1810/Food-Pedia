@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Sarabun:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../project-1/style.css">
+        <title>Website</title>
+        <style>
+            ::-webkit-scrollbar {
+              width: 10px;
+              height: 10px;
+            }
+            
+            ::-webkit-scrollbar-track {
+              background: #f1f1f1; 
+            }
+             
+            ::-webkit-scrollbar-thumb {
+              background: #888; 
+            }
+            
+            ::-webkit-scrollbar-thumb:hover {
+              background: #555; 
+            }
+            </style>
+    </head>
+    <body>
+        <div class="main-body">
+            <div class="upper-part" id="navbar">
+                <a href="#" id="website-name">Website</a>
+                <a href="#" id="log-in">Log In</a>
+                <script>
+                  window.onscroll = function() {scrollFunction()};
+
+                  function scrollFunction() {
+                    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 35) {
+                      document.getElementById("navbar").style.padding = "5px 845px 5px 845px";
+                      
+                      if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550){
+                        document.getElementById("navbar").style.padding = "0px 140px 600px 140px";
+                        document.getElementById("vid-scroll").style.top = "150px";
+                        document.getElementById("vid-scroll").style.left = "0px";
+                        document.getElementById("vid-scroll").style.margin = "25px";
+                        document.getElementById("vid-scroll").style.zIndex = "10";
+                        document.getElementById("vid").style.width = "450px";
+                        document.getElementById("vid").style.height = "400px";
+                        document.getElementById("vid").style.position = "fixed";
+                      }
+                      else{
+                        document.getElementById("vid-scroll").style.top = "250px";
+                        document.getElementById("vid-scroll").style.left = "550px";
+                        document.getElementById("vid-scroll").style.margin = "50px";
+                        document.getElementById("vid-scroll").style.zIndex = "0";
+                        document.getElementById("vid").style.width = "1100px";
+                        document.getElementById("vid").style.height = "300px";
+                        document.getElementById("vid").style.position = "relative";
+                        
+                      }
+                    }    
+                    else {
+                      document.getElementById("navbar").style.padding = "53px 845px 53px 845px";
+                    }        
+                  }
+                </script>
+<!-- 
+                <div id="log-in-img" onclick="open()">
+                    <span class="material-icons-outlined">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></svg>
+                    </span>
+                </div>
+                 -->
+            </div>
+            <div class="middle-part">
+                <div>
+                  <!-- add video -->
+                </div>              
+                <div class="side-bar" id="side">
+                  <div class="side-options" onclick="home()" >Home</div>
+                  <script>
+                    function home(){
+                      window.open("http://127.0.0.1:5500/project-1/index.html","_self")
+                    }
+                  </script>
+                  <div class="side-options" onclick="open()" >Explore</div>
+                  <div class="side-options" onclick="open()" >Category</div>
+                  <div class="side-options" onclick="open()" >About</div>
+                  <div class="side-options" onclick="open()" >Contact</div>
+                </div>
+                <div class="search-bar">
+                    <input class="search" placeholder="Search for cuisine or a dish">
+                    <button class="search-button">Search</button>
+                </div>
+
+                <div class="vid-panel" id="vid-scroll">
+                  <iframe id="vid" src="https://www.youtube.com/embed/L6yX6Oxy_J8?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="main">
+                    <!-- <div id="overlay" onclick="off()">
+                      <div class="overlay-content">
+                        <img id="img">
+                      </div> -->
+                    </div>
+                    <div class="option-container" id="slide-options">
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 1;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-1" src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1126,w_2000,x_0,y_181/f_auto,q_auto,w_1100/v1554932288/shape/mentalfloss/12531-istock-637790866.jpg" alt="Image not Available">
+                            <div class="overlay-img">
+                              <div class="name">Burger</div>
+                            </div>
+                          </div>
+                          <br>
+                          <textarea readonly>
+                            ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique risus non mi consequat, nec condimentum mi commodo.
+                          </textarea> 
+                          <!-- OVERLAY JS
+                            
+                            <script>
+                            var modal = document.getElementById("overlay");
+                            var modalImg = document.getElementById("img");
+                            var img = document.getElementById("myImg-1");
+                            img.onclick = function(){
+                              modal.style.display = "block";
+                              modalImg.src = this.src;
+                            }
+                          </script> -->
+                        </div>
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 2;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-2" src="https://www.thedailymeal.com/sites/default/files/2020/05/07/shutterstock_225746563.jpg" alt="Image not Available"> 
+                            <div class="overlay-img">
+                              <div class="name">Pizza</div>
+                            </div>
+                          </div>
+                          <br>
+                          <textarea readonly>
+                            Pellentesque hendrerit risus non placerat aliquet.Aliquam eu diam laoreet, pulvinar risus sit amet, pharetra massa. Aliquam erat volutpat. Donec consectetur lorem metus, viverra porttitor metus cursus eget.
+                          </textarea>
+                        </div>
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 3;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-3" src="https://www.licious.in/blog/wp-content/uploads/2020/12/3-Step-Chicken-Salad.jpg" alt="Image not Available">
+                            <div class="overlay-img">
+                              <div class="name">Salad</div>
+                            </div>
+                          </div> 
+                          <br>
+                          <textarea readonly>
+                            Curabitur tristique, leo a pulvinar vulputate, tortor nulla fringilla elit, vitae auctor urna tortor non mauris.
+                          </textarea>
+                        </div>
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 4;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-4" src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3VzaGl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" alt="Image not Available">
+                            <div class="overlay-img">
+                              <div class="name">Sushi</div>
+                            </div>
+                          </div>
+                          <br>
+                          <textarea readonly>
+                            Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                          </textarea>
+                        </div>
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 5;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-5" src="https://www.thespruceeats.com/thmb/9QUNxZ9-RO4uLx48uTfLnUK7IWI=/2000x1332/filters:fill(auto,1)/thai-red-curry-with-chicken-recipe-3217262-hero-01-1099358354ca43b89d2c7cc3409a079b.jpg" alt="Image not Available">
+                            <div class="overlay-img">
+                              <div class="name">Thai Curry</div>
+                            </div>
+                          </div> 
+                          <br>
+                          <textarea readonly>
+                            Nam sollicitudin arcu eget metus vestibulum, ut condimentum mauris sagittis. Aliquam ac risus elementum, scelerisque nulla ac, gravida elit.
+                          </textarea>
+                        </div>
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 6;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-6" src="https://cdn.urbanpiper.com/media/bizmedia/2020/01/22/43-PapdiChaat-Om-Sweets-Website-2020-7975_COMPRESSED.jpg" alt="Image not Available">
+                            <div class="overlay-img">
+                              <div class="name">Chat Papdi</div>
+                            </div>
+                          </div>
+                          <br>
+                          <textarea readonly>
+                           Pellentesque eu ipsum placerat, aliquet risus id, aliquet risus.
+                          </textarea>
+                        </div>
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 7;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-7" src="" alt="Image not Available"> 
+                            <div class="overlay-img">
+                              <div class="name">Name</div>
+                            </div>
+                          </div>
+                          <br>
+                          <textarea readonly>
+                           Pellentesque eu ipsum placerat, aliquet risus id, aliquet risus.
+                          </textarea>
+                        </div>
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 8;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-8" src="" alt="Image not Available">
+                            <div class="overlay-img">
+                              <div class="name">Name</div>
+                            </div>
+                          </div> 
+                          <br>
+                          <textarea readonly>
+                           Pellentesque eu ipsum placerat, aliquet risus id, aliquet risus.
+                          </textarea>
+                        </div>
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 9;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-9" src="" alt="Image not Available">
+                            <div class="overlay-img">
+                              <div class="name">Name</div>
+                            </div>
+                          </div> 
+                          <br>
+                          <textarea readonly>
+                           Pellentesque eu ipsum placerat, aliquet risus id, aliquet risus.
+                          </textarea>
+                        </div>
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 10;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-10" src="" alt="Image not Available">
+                            <div class="overlay-img">
+                              <div class="name">Name</div>
+                            </div>
+                          </div> 
+                          <br>
+                          <textarea readonly>
+                           Pellentesque eu ipsum placerat, aliquet risus id, aliquet risus.
+                          </textarea>
+                        </div>
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 11;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-11" src="" alt="Image not Available">
+                            <div class="overlay-img">
+                              <div class="name">Name</div>
+                            </div>
+                          </div> 
+                          <br>
+                          <textarea readonly>
+                           Pellentesque eu ipsum placerat, aliquet risus id, aliquet risus.
+                          </textarea>
+                        </div>
+                        <div class="options" onclick="on()" style="background: rgb(138, 115, 115); order: 12;">
+                          <div class="img-name-overlay">
+                            <img class="overlay-content" id="myImg-12" src="" alt="Image not Available">
+                            <div class="overlay-img">
+                              <div class="name">Name</div>
+                            </div>
+                          </div> 
+                          <br>
+                          <textarea readonly>
+                           Pellentesque eu ipsum placerat, aliquet risus id, aliquet risus.
+                          </textarea>
+                        </div>
+                        <script>
+                            function on() {
+                              document.getElementById("overlay").style.display = "block";
+                            }
+                            
+                            function off() {
+                              document.getElementById("overlay").style.display = "none";
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-part">
+                <div class="slide"> 
+                    <div class="slide-container">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+
+    </footer>
+</html>
